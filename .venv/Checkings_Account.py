@@ -5,7 +5,7 @@ class Checkings_Account(Bank.Bank):
         self.transfer_limit = trans_limit
 
     def withdraw(self, amount):
-        if self.current_balance - amount < self.minimum_balance & amount < self.transfer_limit:
+        if self.current_balance - amount < self.minimum_balance & amount <= self.transfer_limit:
             print("Error: Insufficient Funds Available")
         else:
             self.current_balance -= amount
