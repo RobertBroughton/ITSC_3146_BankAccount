@@ -1,9 +1,11 @@
 class Bank:
     title_of_bank = "Title of Bank"
-    def __init__(self,name, bal, minBal):
+    def __init__(self,name, bal, minBal,acc_num,route_num):
         self.customer_name = name
         self.current_balance = bal
         self.minimum_balance = minBal
+        self._account_number = acc_num
+        self.__routing_number = route_num
     def deposit(self, amount):
         self.current_balance += amount
     def withdraw(self, amount):
